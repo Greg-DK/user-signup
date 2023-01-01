@@ -50,63 +50,119 @@ table {
 /* Post Reset */
 
 body {
-    background-image: url(img/weights.jpg);
-    background-size: 500px;
-    background-repeat: no-repeat;
     font-family: 'Montserrat', sans-serif;
 }
-.container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;   
-    margin: 4rem;
-    text-align: left;
-    
-    
+
+/* Nav Bar*/
+nav {
+    position: fixed;
+    left: 33vw;
+    margin: 1rem 1rem;
 }
 
-.container img {
-    width: 300px;
-    position: absolute;
-    padding-left: 2rem;
-}
-.container h1 {
-    font-size: 6rem;
-    font-weight: bolder;
-    grid-column: 2 / 2;
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: clamp(1rem, 20vw, 10rem);
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
-.container p {
-    padding-top: 2rem;
+nav a{
+    text-decoration: none;
+    color: black;
+}
+/* 
+.nav-list a:hover {
+    text-decoration: underline;
+} */
+
+.un {
+    display: inline-block;
+}
+  
+.un:after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+
+.un:hover:after {
+    width: 100%;
+}
+
+.right {
+    width: 60vw;
+    position:fixed;
+    left: 33vw;
+    top: 0vh;
+    margin: 4rem 1rem;
+}
+
+.bg {
+    background-image: url(img/weights.jpg);
+    background-repeat: no-repeat; 
+    background-size: 33vw;
+    width: 33vw;
+    height:100vh;
+} 
+
+.logo-banner {
+    background-color: rgba(218,235,242, 0.8);
+    position: relative;
+    width: 33vw;
+    top: 20vh;
+    text-align: center;
+}
+
+#logo {
+    height: 8rem;
+    width: auto;
+    vertical-align: middle;
+    padding-top: 0.5rem;
+}
+
+.logo-caption {
     font-size: 2rem;
-    grid-column: 2 / 2;
+    font-weight: 600;
+    padding: 0.5rem;
 }
 
-.form-container  {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+.hero-container h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 2rem 0rem;
+}
+
+.hero-container p {
+    padding: 0rem 0rem 2rem 0rem;
+    font-size: 2rem;
 }
 
 form {
-    padding-left: 1.5rem;
     display: table;
-    grid-column: 2;
     font-size: 1.5rem;
 }
 div.form {
     display: table-row;
-    padding: 0px;
 }
 
-label {
-    padding: 0px;
-    margin: -5rem;
-}
-
-label,
 input {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
     display: table-cell;
-    border: solid 2px black;
-    
+    padding: 0rem 1rem;
+    border-radius: 100vw;
+    box-shadow: 0 1.125em 1em -0.6em black;
+}
+
+.footer-container {
+    position:absolute;
+    top: 95vh;
+    text-align: center;
+    width: 100vw;
 }
